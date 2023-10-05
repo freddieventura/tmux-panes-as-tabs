@@ -2,7 +2,8 @@
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-source "$CURRENT_DIR/scripts/helpers.sh"
+tmux run-shell "$CURRENT_DIR/scripts/helpers.sh"
+#source "$CURRENT_DIR/scripts/helpers.sh"
 
 #tmux display-message "panes-as-tabs executed"
 
