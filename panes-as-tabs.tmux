@@ -5,7 +5,6 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/scripts/helpers.sh"
 
 #tmux display-message "panes-as-tabs executed"
-echo "panes-as-tabs executed"
 
 
 # tmux bind-key -r o select-pane -t .+1 \; resize-pane -Z
