@@ -6,6 +6,13 @@ This plugin will allow you manage panes easier, as if they were tabs.
 
 [![asciicast](https://asciinema.org/a/HKDSRpKhsapUoJLjUGajC7Mt4.svg)](https://asciinema.org/a/HKDSRpKhsapUoJLjUGajC7Mt4)
 
+## Installation via [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+
+Just add the following line to your `.tmux.conf`
+```
+set -g @plugin 'freddieventura/tmux-panes-as-tabs'
+```
+
 ## Functioning
 
 By using the Plugin Prefix Key (Alt + A by default) you can switch the focus on the pane by just pressing a number
