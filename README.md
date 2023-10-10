@@ -2,6 +2,10 @@
 
 This plugin will allow you manage panes easier, as if they were tabs.
 
+## Video show-off
+
+[![asciicast](https://asciinema.org/a/HKDSRpKhsapUoJLjUGajC7Mt4.svg)](https://asciinema.org/a/HKDSRpKhsapUoJLjUGajC7Mt4)
+
 ## Functioning
 
 By using the Plugin Prefix Key (Alt + A by default) you can switch the focus on the pane by just pressing a number
