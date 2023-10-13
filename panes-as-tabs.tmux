@@ -69,7 +69,9 @@ set_bindings() {
 }
 set_hooks() {
     if [[ $(get_pane_sync_on)  == 'yes' ]] then
+        set_tmux_hook_zoom_synced_pane
         set_tmux_hook_sync_active_pane
+#        tmux set-hook -g after-select-pane[1] "resize-pane -Z -t ${sync_destiny}"
     else
         tmux set-hook -gu after-select-pane[0]
     fi

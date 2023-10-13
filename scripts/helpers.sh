@@ -58,7 +58,11 @@ set_tmux_hook_sync_active_pane() {
     local fullpath_command="${SCRIPT_DIR}/sync_active_pane.sh"
     local run_shell_command
     run_shell_command="run-shell \"${fullpath_command} -s ${sync_source} -t ${sync_destiny}\""
-    tmux set-hook -g "after-select-pane[0]" "$run_shell_command"
+    tmux set-hook -g "after-select-pane[1]" "$run_shell_command"
+}
+set_tmux_hook_zoom_synced_pane() {
+    local sync_destiny=$(get_sync_destiny)
+    tmux set-hook -g after-select-pane[0] "resize-pane -Z -t ${sync_destiny}"
 }
 
 set_tmux_runshell_sync_active_pane() {

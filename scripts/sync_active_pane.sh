@@ -68,6 +68,9 @@ done
 
 
 
-tmux select-pane -tZ \$${destiny_window}.${active_pane}
-
+tmux select-pane -t \$${destiny_window}.${active_pane}
+if [[ tmux display -t ${destiny_window} "#{window_zoomed_flag}" == 0 ]] then
+    echo "BANG!!"
+    tmux resize-pane -Z -t ${destiny_window}
+fi
 
