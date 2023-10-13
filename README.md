@@ -32,6 +32,10 @@ By default it will make the Status Bar get 2 lines height, so the Second Line wi
 
 You can change a pane name by just Plugin Prefix + c
 
+You can also sync the active pane from one session:window to another session window, so switching in one will switch in the other.
+This can be helpfull when working in fullscreen mode, using 2 windows which have tabs related to each other. Thus when changing the pane focus in one of the windows will change the focus in the otherone.
+
+
 
 We used to call them panes, call them tabs now!!.
 
@@ -49,12 +53,24 @@ set -g @panes_as_tabs_prefix 'M-g'
 For change the default Pane As Tabs Fullscreen Mode to not full screen
 
 ```
-set -g @panes_as_tabs_fullscreen_default 'nofull'
+set -g @panes_as_tabs_fullscreen 'nofull'
 ```
+
+For using the pane synchronization funtionality do
+
+```
+set -g @panes_as_tabs_pane_sync_on 'yes'
+set -g @panes_as_tabs_pane_sync_source '0:1'
+set -g @panes_as_tabs_pane_sync_destiny '0:2'
+```
+Note, the pane_sync_source and destiny syntax is `<session-id>:<window-id>` no special characters on it.
 
 
 ## New features to add on new versions
 
 - Dvorak and other keyboard layout support for qwerty (11 -12 -13 ...) Pane numbers
 - Upon fullscreen toggle zoom in all Tabs in Session (make it as a custom option)
-- Synchronise focused pane no in between 2 windows (create a hook for that)
+    Make fullscreen mode work per window (so have some windows in full-screen mode some others not)
+- pane_sync functionality . Make it work both ways (from target window to source window too)
+  Create the possiblity of sycing more than 2 windows (possibly as many as you want)
+
