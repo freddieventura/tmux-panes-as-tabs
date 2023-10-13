@@ -72,5 +72,6 @@ Note, the pane_sync_source and destiny syntax is `<session-id>:<window-id>` no s
 - Upon fullscreen toggle zoom in all Tabs in Session (make it as a custom option)
     Make fullscreen mode work per window (so have some windows in full-screen mode some others not)
 - pane_sync functionality . Make it work both ways (from target window to source window too)
-  Create the possiblity of sycing more than 2 windows (possibly as many as you want)
+  Create the possiblity of syncing more than 2 windows (possibly as many as you want)
+- Currently it is only able to work with pane_syncing on full-screen mode
 

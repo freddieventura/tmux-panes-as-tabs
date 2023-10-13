@@ -68,6 +68,6 @@ done
 
 
 
-tmux select-pane -t \$${destiny_window}.${active_pane}
+tmux select-pane -tZ \$${destiny_window}.${active_pane}
 
 
