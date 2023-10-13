@@ -67,9 +67,17 @@ set_bindings() {
     tmux bind-key -T panes_as_tabs_nofull c command-prompt -p "rename pane to:" "select-pane -T '%%'"
 
 }
+set_hooks() {
+    if [[ $(get_pane_sync_on)  == 'yes' ]] then
+        set_tmux_hook_sync_active_pane
+    else
+        tmux set-hook -gu after-select-pane[0]
+    fi
+}
 
 main() {
     set_bindings
     set_options
+    set_hooks
 }
 main
