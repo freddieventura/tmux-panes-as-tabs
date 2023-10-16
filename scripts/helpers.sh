@@ -39,7 +39,6 @@ get_panes_as_tabs_fullscreen() {
 }
 
 toggle_panes_as_tabs_fullscreen() { 
-    echo "BANG!!"
     if [ $(get_pane_as_tabs_fullscreen) == 'full' ]; then
         set_tmux_option "${panes_as_tabs_fullscreen_option}" "nofull"
     elif [ $(get_pane_as_tabs_fullscreen) == 'nofull' ]; then
