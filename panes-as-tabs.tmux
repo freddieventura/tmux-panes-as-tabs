@@ -6,8 +6,8 @@ source "$CURRENT_DIR/scripts/helpers.sh"
 source "$CURRENT_DIR/scripts/variables.sh"
 
 set_options() {
-    tmux set-option -g status 2
-    tmux set-option -g status-format[1] "#[align=centre]#{P:#{?pane_active,#[reverse],}#{pane_index}[#{pane_title}]#[default] }"
+#    tmux set-option -g status 2
+#    tmux set-option -g status-format[1] "#[align=centre]#{P:#{?pane_active,#[reverse],}#{pane_index}[#{pane_title}]#[default] }"
 }
 set_bindings() {
     tmux bind-key -T root "$(get_panes_as_tabs_prefix)" switch-client -T panes_as_tabs_$(get_panes_as_tabs_fullscreen)
